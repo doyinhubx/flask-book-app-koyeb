@@ -48,3 +48,12 @@ docker-compose.override.yml
 
 # Tests
 .coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+.cache
+pytest_cache/
+
+# PyInstaller
+*.spec
