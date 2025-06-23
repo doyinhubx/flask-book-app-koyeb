@@ -1,0 +1,50 @@
+# Bytecode and cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.env
+.env.*
+.venv/
+
+# Flask
+instance/
+*.db
+*.sqlite3
+*.log
+
+# Flask-Migrate
+migrations/
+alembic.ini
+
+# MySQL dumps/backups
+*.sql
+*.dump
+
+# Compiled files / static builds
+*.tar.gz
+*.egg-info/
+dist/
+build/
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# Replit-specific (if using)
+.replit
+.replit.cache/
+
+# Docker-related (optional)
+*.pid
+*.sock
+docker-compose.override.yml
+
+# Tests
+.coverage

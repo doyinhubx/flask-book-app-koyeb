@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ 'Edit' if form.title.data else 'Add' }} Book</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="mb-3">{{ form.title.label }} {{ form.title(class="form-control") }}</div>
+    <div class="mb-3">{{ form.author.label }} {{ form.author(class="form-control") }}</div>
+    <div class="mb-3">{{ form.genre.label }} {{ form.genre(class="form-control") }}</div>
+    <div class="mb-3">{{ form.description.label }} {{ form.description(class="form-control") }}</div>
+    <div class="mb-3">{{ form.isbn.label }} {{ form.isbn(class="form-control") }}</div>
+    <div class="mb-3">{{ form.published_date.label }} {{ form.published_date(class="form-control") }}</div>
+    <button type="submit" class="btn btn-success">{{ form.submit.label }}</button>
+</form>
+{% endblock %}
