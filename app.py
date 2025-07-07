@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for, request, abort
 from models import db, Book
 from forms import BookForm
 from config import Config
@@ -37,7 +37,9 @@ def add_book():
 
 @app.route('/edit/<int:id>', methods=['GET', 'POST'])
 def edit_book(id):
-    book = Book.query.get_or_404(id)
+    book = db.session.get(Book, id)
+    if not book:
+        abort(404)
     form = BookForm(obj=book)
     if form.validate_on_submit():
         form.populate_obj(book)
@@ -47,7 +49,9 @@ def edit_book(id):
 
 @app.route('/delete/<int:id>')
 def delete_book(id):
-    book = Book.query.get_or_404(id)
+    book = db.session.get(Book, id)
+    if not book:
+        abort(404)
     db.session.delete(book)
     db.session.commit()
     return redirect(url_for('index'))

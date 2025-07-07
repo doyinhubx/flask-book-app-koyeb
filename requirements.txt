@@ -4,3 +4,7 @@ Flask-WTF
 Flask-SQLAlchemy
 Flask-Migrate
 python-dotenv
+pytest
+pytest-flask
+coverage
+pytest-cov
