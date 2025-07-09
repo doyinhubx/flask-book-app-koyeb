@@ -9,7 +9,7 @@ class Book(db.Model):
     author = db.Column(db.String(255), nullable=False)
     genre = db.Column(db.String(100))
     description = db.Column(db.Text)
-    isbn = db.Column(db.String(13))
+    isbn = db.Column(db.String(20))
     published_date = db.Column(db.Date)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
