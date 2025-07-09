@@ -9,7 +9,6 @@ venv/
 .env.*
 .venv/
 
-
 # Flask
 instance/
 *.db
@@ -17,7 +16,7 @@ instance/
 *.log
 
 # Flask-Migrate
-alembic.ini
+# alembic.ini
 
 # MySQL dumps/backups
 *.sql
